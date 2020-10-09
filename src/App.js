@@ -1,17 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Calculator from './component/Calculator'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          trying to deploy change in second phase
-        </p>
-       
-      </header>
+    <div style={{background:"#61c6f2",height:"98vh"}}>
+   <Calculator/>
     </div>
   );
 }
