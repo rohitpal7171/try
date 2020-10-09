@@ -1,4 +1,4 @@
-import {displayValue,solveValue,clearValue,DISPLAY_VALUE,SOLVE,CLEAR} from './action'
+import {DISPLAY_VALUE,SOLVE,CLEAR} from './action'
 import {result} from './state'
 
 export let reducer = ( state = result ,action )=>{
@@ -13,6 +13,8 @@ export let reducer = ( state = result ,action )=>{
             break;
  
         case CLEAR:
+            break;
+        default:
             break;
     }
     return state;

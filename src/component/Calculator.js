@@ -1,9 +1,9 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import { Paper,TextField,Container, Grid, Fab, colors } from '@material-ui/core';
-import InputBase from '@material-ui/core/InputBase';
-import {useSelector} from 'react-redux'
-import {useDispatch} from 'react-redux'
+import { Paper,Container, Grid, Fab} from '@material-ui/core';
+
+
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -70,8 +70,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Calculator (){
 
-  let endResult = useSelector(state => state) // Direct use karne par bhi aa rahi hai value ...result mai sirf
-  let dispatch = useDispatch()
+
+  
 
 const [showValue,setshowValue]= React.useState([])
 const [resultValue,setresultValue] = React.useState('')
@@ -87,11 +87,11 @@ const handleClear=()=>{
 }
 
 const addToInput =(val)=>{
-
+  var children=[]
   if( val === "+" ||val === "-" ||val === "*" ||val === "/"|| val === "%"){
       
     if (!isLastOperator) {
-      var children=[]
+     
       children.push(showValue + val)
       setshowValue(children)
       setisLastOperator(true)
@@ -110,7 +110,7 @@ const addToInput =(val)=>{
   else if (val === "1" || val === "2" || val ==="3"||val === "4" || val === "5" || val ==="6"|| val ==="7"||val === "8" || val === "9" || val ==="0"|| val ===".")
   {
   
-    var children=[]
+    
     children.push(showValue + val)
     setshowValue(children)
     setisLastOperator(false)
@@ -166,7 +166,7 @@ const findResult =()=>{
                  
              </Grid>
              </form> */}
- <div style={{textAlign:"right",color:"#90d7f5",fontSize:"35px",width:"240px",height:"40px",overflow:"auto"}}>
+ <div style={{textAlign:"right",color:"#90d7f5",fontSize:"35px",width:"240px",height:"50px",overflow:"auto"}}>
                {showValue} 
                </div>
 
